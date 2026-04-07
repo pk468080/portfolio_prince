@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Button from '../components/shared/Button';
@@ -8,43 +7,44 @@ import FadeInSection from '../components/shared/FadeInSection';
 import { services } from '../data/servicesData';
 import { caseStudies } from '../data/portfolioData';
 import styles from './Home.module.css';
+import princeImg from '../img/prince.png';
 
 const testimonials = [
   {
-    quote: 'Alex transformed our organic presence completely. The results speak for themselves – our revenue from organic search tripled in just six months.',
-    name: 'Sarah K.',
-    role: 'Head of Digital, StyleHub',
-    initials: 'SK',
+    quote: 'Prince helped optimize our Google Ads campaigns and significantly improved lead quality and conversions.',
+    name: 'Marketing Manager',
+    role: 'B2B SaaS Company',
+    initials: 'MM',
   },
   {
-    quote: "What a transformation! Alex knew exactly what was wrong and fixed it systematically. Our paid channel is now our top-performing acquisition source.",
-    name: 'Marcus T.',
-    role: 'Growth Lead, Taskflow',
-    initials: 'MT',
+    quote: "Our website traffic improved after Prince implemented SEO optimizations and keyword strategies.",
+    name: 'Startup Founder',
+    role: 'Ecommerce Brand',
+    initials: 'SF',
   },
   {
-    quote: "Alex brought our brand to life on social. The content strategy they built is so clear that our whole team can execute it. Incredible results.",
-    name: 'Priya S.',
-    role: 'Founder, Luminary Living',
-    initials: 'PS',
+    quote: "Great understanding of performance marketing and analytics. Campaign reporting and insights were very clear.",
+    name: 'Growth Lead',
+    role: 'Digital Company',
+    initials: 'GL',
   },
 ];
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Clients Served' },
-  { value: 240, suffix: '%', label: 'Avg. Traffic Growth' },
-  { value: 3, suffix: '.8×', label: 'Avg. ROAS' },
-  { value: 4, suffix: ' yrs', label: 'Experience' },
+  { value: 15, suffix: '+', label: 'Campaigns Managed' },
+  { value: 120, suffix: '%', label: 'Traffic Growth Achieved' },
+  { value: 3, suffix: '+', label: 'Ad Platforms Managed' },
+  { value: 1, suffix: '+ yrs', label: 'Industry Experience' },
 ];
 
 function Home() {
   return (
     <>
       <Helmet>
-        <title>Alex Johnson | Digital Marketing Portfolio</title>
+        <title>Prince Kumar | Digital Marketing Executive</title>
         <meta
           name="description"
-          content="Alex Johnson – Digital Marketing Specialist offering SEO, PPC, Social Media & Content Strategy that drives measurable results."
+          content="Prince Kumar – Digital Marketing Executive specializing in SEO, Google Ads, Meta Ads, and data-driven marketing strategies to grow traffic and conversions."
         />
       </Helmet>
 
@@ -55,16 +55,21 @@ function Home() {
             {/* Content */}
             <div className={styles.heroContent}>
               <div className={`${styles.heroLabel} fade-in-up`}>
-                <span>👋</span> Available for new projects
+                <span>👋</span> Digital Marketing Executive
               </div>
+
               <h1 className={`${styles.heroTitle} fade-in-up`}>
-                I grow brands with <span>digital marketing</span>
+                I grow businesses with <span>SEO & performance marketing</span>
               </h1>
+
               <p className={`${styles.heroDesc} fade-in-up`}>
-                Hi, I&apos;m <strong>Alex Johnson</strong> – a Digital Marketing Specialist with
-                4 years of experience helping brands scale through data-driven SEO, PPC,
-                social media, and content strategies.
+                Hi, I&apos;m <strong>Prince Kumar</strong> – a Digital Marketing Executive
+                specializing in SEO, Google Ads, Meta Ads, and data-driven marketing
+                strategies. I help businesses increase organic traffic, generate
+                leads, and scale campaigns through analytics and performance
+                optimization.
               </p>
+
               <div className={styles.heroBtns}>
                 <Button to="/portfolio" size="lg">View My Work</Button>
                 <Button to="/contact" variant="outline" size="lg">Let&apos;s Talk</Button>
@@ -75,12 +80,14 @@ function Home() {
             <div className={styles.heroImageWrapper}>
               <div className={styles.heroImage}>
                 <div className={styles.heroImagePlaceholder}>
+                  <img src={princeImg} alt="Prince Kumar" />
                   <span role="img" aria-label="Portrait">👤</span>
-                  <span>Alex Johnson</span>
+                  <span>Prince Kumar</span>
                 </div>
               </div>
-              <div className={styles.heroBadge} aria-label="4 years experience">
-                4+ Years Experience
+
+              <div className={styles.heroBadge} aria-label="Experience badge">
+                1+ Year Experience
               </div>
             </div>
           </div>
@@ -111,8 +118,8 @@ function Home() {
           <FadeInSection>
             <SectionTitle
               label="What I Do"
-              title="Services That Drive Results"
-              subtitle="From traffic acquisition to conversion optimization, I provide end-to-end digital marketing solutions tailored to your business goals."
+              title="Digital Marketing Services"
+              subtitle="From SEO strategy and keyword research to paid advertising and campaign optimization, I provide data-driven marketing solutions designed to increase traffic, leads, and conversions."
             />
           </FadeInSection>
 
@@ -138,9 +145,9 @@ function Home() {
         <div className="container">
           <FadeInSection>
             <SectionTitle
-              label="Featured Work"
-              title="Recent Case Studies"
-              subtitle="Real campaigns, real results. Here's a sample of the work I've done for clients across industries."
+              label="Portfolio"
+              title="Marketing Projects & Campaigns"
+              subtitle="Examples of SEO improvements, paid advertising campaigns, and digital marketing strategies that improved traffic, visibility, and conversions."
             />
           </FadeInSection>
 
@@ -180,8 +187,8 @@ function Home() {
           <FadeInSection>
             <SectionTitle
               label="Testimonials"
-              title="What Clients Say"
-              subtitle="Don't just take my word for it. Here's what clients have said about working with me."
+              title="Client Feedback"
+              subtitle="Here’s what clients and teams have said about working with me on SEO and performance marketing campaigns."
             />
           </FadeInSection>
 
@@ -213,13 +220,14 @@ function Home() {
         <div className="container">
           <FadeInSection>
             <div className={styles.ctaInner}>
-              <h2>Ready to Grow Your Brand?</h2>
+              <h2>Ready to Grow Your Business?</h2>
               <p>
-                Let&apos;s build a digital marketing strategy that drives real, measurable
-                results for your business. Book a free 30-minute strategy call today.
+                Let’s build a data-driven digital marketing strategy using SEO,
+                Google Ads, and Meta Ads to increase your traffic, leads, and ROI.
               </p>
+
               <div className={styles.ctaBtns}>
-                <Button to="/contact" size="lg">Book a Free Call</Button>
+                <Button to="/contact" size="lg">Book a Free Consultation</Button>
                 <Button to="/services" variant="outline" size="lg">See Services</Button>
               </div>
             </div>

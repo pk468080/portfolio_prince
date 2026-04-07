@@ -1,4 +1,3 @@
-// src/pages/About.jsx
 import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Button from '../components/shared/Button';
@@ -7,60 +6,62 @@ import FadeInSection from '../components/shared/FadeInSection';
 import styles from './About.module.css';
 
 const skills = [
-  { name: 'SEO Strategy', percent: 95 },
-  { name: 'Google Ads / PPC', percent: 90 },
-  { name: 'Meta Advertising', percent: 88 },
-  { name: 'Content Marketing', percent: 85 },
-  { name: 'Social Media Marketing', percent: 92 },
-  { name: 'Email Marketing', percent: 80 },
-  { name: 'Google Analytics 4', percent: 90 },
-  { name: 'Conversion Rate Optimization', percent: 78 },
+  { name: 'SEO Strategy', percent: 90 },
+  { name: 'Google Ads (Search & Display)', percent: 88 },
+  { name: 'Meta Ads (Facebook & Instagram)', percent: 85 },
+  { name: 'Keyword Research', percent: 92 },
+  { name: 'Technical SEO & SEO Audits', percent: 85 },
+  { name: 'Conversion Tracking & Analytics', percent: 82 },
+  { name: 'Campaign Optimization', percent: 84 },
+  { name: 'Content & Blog Optimization', percent: 80 },
 ];
 
 const timeline = [
   {
-    date: '2024 – Present',
-    role: 'Senior Digital Marketing Consultant',
-    company: 'Freelance / Remote',
-    description: 'Working with e-commerce brands, SaaS companies, and local businesses to build and execute full-funnel digital marketing strategies. Specializing in SEO, paid media, and conversion optimization.',
+    date: 'Jan 2026 – Mar 2026',
+    role: 'Digital Marketing Executive',
+    company: 'Thumbpin Private Limited',
+    description:
+      'Executed multi-channel marketing campaigns across Google Ads, Meta Ads, and LinkedIn Ads. Designed ad creatives using Canva and AI tools, implemented on-page SEO improvements, and generated performance reports and campaign insights.',
   },
   {
-    date: '2022 – 2024',
-    role: 'Digital Marketing Manager',
-    company: 'GrowthLab Agency',
-    description: 'Led digital marketing for 15+ clients across SEO, PPC, and social media. Managed a $200k/month collective ad spend portfolio and grew agency revenue by 45% through new client acquisition.',
+    date: 'Apr 2025 – Jan 2026',
+    role: 'Digital Marketing Assistant',
+    company: 'Mesnotechno Media Pvt. Ltd.',
+    description:
+      'Implemented SEO strategies including on-page and off-page optimization, created GEO and AEO optimized content, analyzed website performance using Google Analytics and Search Console, and managed paid advertising campaigns.',
   },
   {
-    date: '2021 – 2022',
-    role: 'SEO & Content Specialist',
-    company: 'TechBridge Solutions',
-    description: 'Built and executed SEO strategies for B2B tech clients. Produced 8–12 pieces of long-form content monthly, contributing to a 180% increase in organic lead generation.',
-  },
-  {
-    date: '2019 – 2021',
-    role: 'Marketing Coordinator',
-    company: 'Retail Ventures Inc.',
-    description: 'First marketing role. Managed social media accounts, email campaigns, and supported paid advertising efforts for a mid-sized retail chain with 12 locations.',
+    date: '2023 – Present',
+    role: 'B.Com (Hons.) Student',
+    company: 'Manav Rachna University',
+    description:
+      'Currently pursuing Bachelor of Commerce while developing practical skills in digital marketing including SEO, performance marketing, and marketing analytics.',
   },
 ];
 
 const certifications = [
-  { icon: '🏅', name: 'Google Ads Certified', issuer: 'Google · 2024' },
-  { icon: '🏅', name: 'Google Analytics Certified', issuer: 'Google · 2024' },
-  { icon: '🏆', name: 'Meta Blueprint Certified', issuer: 'Meta · 2023' },
-  { icon: '📜', name: 'HubSpot Content Marketing', issuer: 'HubSpot Academy · 2023' },
-  { icon: '📜', name: 'SEMrush SEO Fundamentals', issuer: 'SEMrush · 2024' },
-  { icon: '📜', name: 'Ahrefs SEO Training', issuer: 'Ahrefs Academy · 2023' },
+  { icon: '📜', name: 'Digital Marketing Professional', issuer: 'DIDM' },
+  { icon: '📜', name: 'SEO Certification', issuer: 'Moz' },
 ];
 
 const tools = [
-  'Google Ads', 'Meta Ads Manager', 'Google Analytics 4', 'Google Search Console',
-  'SEMrush', 'Ahrefs', 'Moz', 'Screaming Frog', 'Mailchimp', 'Klaviyo',
-  'HubSpot', 'Salesforce', 'Canva', 'Adobe Photoshop', 'Later', 'Sprout Social',
-  'Data Studio / Looker Studio', 'Hotjar', 'Zapier', 'Notion',
+  'Google Ads',
+  'Meta Ads Manager',
+  'LinkedIn Campaign Manager',
+  'Google Analytics',
+  'Google Search Console',
+  'Google Tag Manager',
+  'SEMrush',
+  'Ahrefs',
+  'WordPress',
+  'Canva',
+  'ChatGPT',
+  'Gemini',
+  'Claude AI',
 ];
 
-// SkillBar uses IntersectionObserver to animate on scroll
+// SkillBar animation
 function SkillBar({ name, percent }) {
   const fillRef = useRef(null);
 
@@ -89,7 +90,14 @@ function SkillBar({ name, percent }) {
         <span className={styles.skillName}>{name}</span>
         <span className={styles.skillPercent}>{percent}%</span>
       </div>
-      <div className={styles.skillBar} role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} aria-label={`${name}: ${percent}%`}>
+
+      <div
+        className={styles.skillBar}
+        role="progressbar"
+        aria-valuenow={percent}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
         <div ref={fillRef} className={styles.skillFill} />
       </div>
     </div>
@@ -100,63 +108,77 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About | Alex Johnson – Digital Marketing Specialist</title>
+        <title>About | Prince Kumar – Digital Marketing Executive</title>
         <meta
           name="description"
-          content="Learn about Alex Johnson's background, skills, experience, and certifications in digital marketing."
+          content="Learn about Prince Kumar, a Digital Marketing Executive specializing in SEO, Google Ads, Meta Ads, and performance marketing strategies."
         />
       </Helmet>
 
-      {/* ===== Hero ===== */}
-      <section className={styles.hero} aria-label="About hero">
+      {/* HERO */}
+      <section className={styles.hero}>
         <div className="container">
           <div className={styles.heroGrid}>
             <div className={styles.heroContent}>
               <span className={styles.label}>About Me</span>
-              <h1>Digital Marketer With a Data-First Mindset</h1>
+
+              <h1>Digital Marketing Executive Focused on Growth</h1>
+
               <p>
-                I&apos;m Alex Johnson — a Digital Marketing Specialist based in New York, helping
-                brands of all sizes grow their online presence through strategies that are rooted
-                in data, driven by creativity, and laser-focused on results.
+                I’m <strong>Prince Kumar</strong>, a Digital Marketing Executive
+                passionate about helping businesses grow through data-driven
+                marketing strategies. My expertise includes SEO, Google Ads,
+                Meta Ads, and performance analytics to increase traffic,
+                leads, and conversions.
               </p>
+
               <div className={styles.heroBtns}>
-                <Button to="/contact" size="lg">Work With Me</Button>
-                <Button href="/assets/AlexJohnson-Resume.pdf" variant="outline" size="lg">
+                <Button to="/contact" size="lg">
+                  Work With Me
+                </Button>
+
+                <Button
+                  href="/assets/PrinceKumar-Resume.pdf"
+                  variant="outline"
+                  size="lg"
+                >
                   Download CV
                 </Button>
               </div>
             </div>
-            <div className={styles.heroImage} aria-hidden="true">
-              👤
-            </div>
+
+            <div className={styles.heroImage}>👤</div>
           </div>
         </div>
       </section>
 
-      {/* ===== Bio ===== */}
-      <section className={styles.bio} aria-label="Biography">
+      {/* BIO */}
+      <section className={styles.bio}>
         <div className="container">
           <div className={styles.bioGrid}>
             <FadeInSection>
               <div className={styles.bioText}>
                 <h2>My Story</h2>
+
                 <p>
-                  I fell into digital marketing somewhat by accident — I started as a content
-                  writer for a small e-commerce startup, and quickly became obsessed with why
-                  some content ranked and some didn&apos;t. That curiosity led me down a rabbit
-                  hole of SEO, which led to PPC, which led to social media strategy... and
-                  four years later, I&apos;m helping businesses across industries grow their
-                  digital presence.
+                  My journey into digital marketing started with a curiosity
+                  about how websites rank on Google and how online campaigns
+                  generate customers. That curiosity led me to explore SEO,
+                  performance marketing, and analytics.
                 </p>
+
                 <p>
-                  What sets me apart is my obsession with data. Every strategy I build starts
-                  with a deep audit and ends with clear, measurable KPIs. I believe marketing
-                  should be accountable — if we can&apos;t measure it, we can&apos;t improve it.
+                  Over the past year, I have worked on SEO optimization,
+                  content strategy, and multi-platform advertising campaigns
+                  across Google, Meta, and LinkedIn. I focus on creating
+                  strategies that improve visibility, drive traffic, and
+                  increase conversions.
                 </p>
+
                 <p>
-                  Outside of work, I&apos;m passionate about staying at the cutting edge of the
-                  industry. I read marketing publications daily, test new platforms and tools
-                  regularly, and share insights through my blog and LinkedIn.
+                  I continuously explore new marketing technologies and AI
+                  tools to stay updated with the evolving digital marketing
+                  landscape.
                 </p>
               </div>
             </FadeInSection>
@@ -164,13 +186,14 @@ function About() {
             <FadeInSection delay={200}>
               <div className={styles.quickFacts}>
                 <h3>Quick Facts</h3>
+
                 {[
-                  { label: 'Location', value: 'New York, NY' },
-                  { label: 'Experience', value: '4 Years' },
-                  { label: 'Specialization', value: 'SEO & Paid Media' },
-                  { label: 'Clients Served', value: '50+' },
-                  { label: 'Languages', value: 'English, Spanish' },
-                  { label: 'Availability', value: 'Open to projects' },
+                  { label: 'Location', value: 'Gurgaon, Haryana, India' },
+                  { label: 'Experience', value: '1+ Years' },
+                  { label: 'Specialization', value: 'SEO & Paid Advertising' },
+                  { label: 'Campaign Platforms', value: 'Google, Meta, LinkedIn' },
+                  { label: 'Education', value: 'B.Com (Hons.)' },
+                  { label: 'Availability', value: 'Open to opportunities' },
                 ].map(({ label, value }) => (
                   <div key={label} className={styles.factItem}>
                     <span className={styles.factLabel}>{label}</span>
@@ -183,16 +206,17 @@ function About() {
         </div>
       </section>
 
-      {/* ===== Skills ===== */}
-      <section className={styles.skills} aria-label="Skills">
+      {/* SKILLS */}
+      <section className={styles.skills}>
         <div className="container">
           <FadeInSection>
             <SectionTitle
               label="Expertise"
               title="My Skill Set"
-              subtitle="Years of hands-on experience across every major digital marketing discipline."
+              subtitle="Core digital marketing skills developed through hands-on campaigns and analytics-driven optimization."
             />
           </FadeInSection>
+
           <div className={styles.skillsGrid}>
             {skills.map((skill) => (
               <SkillBar key={skill.name} name={skill.name} percent={skill.percent} />
@@ -201,21 +225,23 @@ function About() {
         </div>
       </section>
 
-      {/* ===== Timeline ===== */}
-      <section className={styles.timeline} aria-label="Experience timeline">
+      {/* TIMELINE */}
+      <section className={styles.timeline}>
         <div className="container">
           <FadeInSection>
             <SectionTitle
               label="Experience"
-              title="My Journey"
-              subtitle="From marketing coordinator to independent consultant – here's the path that shaped my expertise."
+              title="Professional Journey"
+              subtitle="My path in digital marketing and performance marketing."
             />
           </FadeInSection>
+
           <ol className={styles.timelineList}>
             {timeline.map((item, i) => (
               <FadeInSection key={item.date} delay={i * 100}>
                 <li className={styles.timelineItem}>
                   <span className={styles.timelineDate}>{item.date}</span>
+
                   <div className={styles.timelineContent}>
                     <h3>{item.role}</h3>
                     <h4>{item.company}</h4>
@@ -228,21 +254,23 @@ function About() {
         </div>
       </section>
 
-      {/* ===== Certifications ===== */}
-      <section className={styles.certifications} aria-label="Certifications">
+      {/* CERTIFICATIONS */}
+      <section className={styles.certifications}>
         <div className="container">
           <FadeInSection>
             <SectionTitle
               label="Credentials"
               title="Certifications"
-              subtitle="Officially certified across all major digital marketing platforms and methodologies."
+              subtitle="Professional certifications validating my digital marketing expertise."
             />
           </FadeInSection>
+
           <div className={styles.certsGrid}>
             {certifications.map((cert, i) => (
               <FadeInSection key={cert.name} delay={i * 80}>
                 <div className={styles.certCard}>
-                  <span className={styles.certIcon} aria-hidden="true">{cert.icon}</span>
+                  <span className={styles.certIcon}>{cert.icon}</span>
+
                   <div className={styles.certInfo}>
                     <h4>{cert.name}</h4>
                     <p>{cert.issuer}</p>
@@ -254,19 +282,22 @@ function About() {
         </div>
       </section>
 
-      {/* ===== Tools ===== */}
-      <section className={styles.tools} aria-label="Tools and software">
+      {/* TOOLS */}
+      <section className={styles.tools}>
         <div className="container">
           <FadeInSection>
             <SectionTitle
               label="Toolkit"
               title="Tools I Work With"
-              subtitle="A selection of the platforms, tools, and software I use daily to execute winning campaigns."
+              subtitle="Platforms and tools I use daily for SEO analysis, advertising campaigns, and marketing analytics."
             />
           </FadeInSection>
-          <div className={styles.toolsGrid} role="list">
+
+          <div className={styles.toolsGrid}>
             {tools.map((tool) => (
-              <span key={tool} className={styles.toolTag} role="listitem">{tool}</span>
+              <span key={tool} className={styles.toolTag}>
+                {tool}
+              </span>
             ))}
           </div>
         </div>
