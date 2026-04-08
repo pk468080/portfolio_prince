@@ -41,7 +41,7 @@ function Navbar() {
         <div className={`container ${styles.inner}`}>
           {/* Logo */}
           <Link to="/" className={styles.logo} onClick={closeMenu} aria-label="Alex Johnson home">
-            Alex<span>.</span>
+            Prince<span>.</span>
           </Link>
 
           {/* Desktop nav links */}
