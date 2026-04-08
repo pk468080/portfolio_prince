@@ -87,7 +87,7 @@ function Footer() {
         <div className={styles.bottom}>
           <p>
             © {year}{' '}
-            <a href="mailto:alex@alexjohnson.com">Alex Johnson</a>. All rights reserved.
+            <a href="mailto:alex@alexjohnson.com">Prince Rathor</a>. All rights reserved.
           </p>
           <nav className={styles.bottomLinks} aria-label="Footer legal links">
             <a href="/contact">Privacy Policy</a>
