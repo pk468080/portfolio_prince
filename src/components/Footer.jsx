@@ -35,7 +35,7 @@ function Footer() {
           {/* Brand column */}
           <div className={styles.brand}>
             <Link to="/" className={styles.logo}>
-              Alex<span>.</span>
+              Prince<span>.</span>
             </Link>
             <p>
               Digital Marketing Specialist helping brands grow through data-driven
